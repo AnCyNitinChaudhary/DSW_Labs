@@ -1,0 +1,348 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    display: inline;
+    position: relative;
+    background-color: #510fd5;
+}
+a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+body {
+    /* display: flex;  */
+    /* justify-content: center;  */
+    align-items: center;
+    min-height: 100vh;
+    /* max-height: 150vh; */
+    background: linear-gradient(to top, #c30991, #510fd5);
+    text-align: center;
+    
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.dropdown{
+    width: 15vw;
+    height: 40vw;
+    overflow-y: auto;
+    }
+.dropdown a { 
+    /* background-color: #eee; */
+    color: black;
+    display: block; 
+    padding: 12px;
+    text-decoration: none;
+    font-size: 1vw;
+}
+    .dropdown a:hover {
+        background-color: #4ab66c;
+    }
+    .vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    .navbar {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: transparent;
+        color: #fff;
+        margin-bottom: 50px;
+       }
+       .nav-links a {
+        color: #fff;
+       }
+       /* LOGO */
+       .logo {
+        font-size: 32px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-left: 0;
+        margin-left: 0;
+        /* border: 4px solid green; */
+        align-items: left;
+        justify-content: space-between;
+        display: flex;
+        margin-top: 10px;
+        flex: 1;
+       }
+       /* NAVBAR MENU */
+       .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 24px;
+        background-color: #510fd5;
+       }
+       .menu li:hover {
+        background-color: #8D72E1;
+        border-radius: 5px;
+        transition: 0.3s ease;
+       }
+       .menu li {
+        padding: 5px 14px;
+        /* background-color: #2f9c95; */
+        border-radius: 10%;
+    
+       }
+       /* DROPDOWN MENU */
+       .services {
+        position: relative; 
+       }
+       .dropdown {
+        background-color: #8D72E1;
+        /* padding: 1em 0; */
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border-radius: 8px;
+        top: 35px;
+       }
+       .dropdown li + li {
+        margin-top: 10px;
+       }
+       .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+       }
+       .dropdown li:hover {
+        background-color: #4ab66c;
+       }
+       .services:hover .dropdown {
+        display: block;
+       }
+    
+       .hamburger {
+        display: none;
+    
+       }
+    
+       input[type=checkbox]{
+        display: none;
+       } 
+    
+       .heading{
+        margin: 20px;
+    }
+    
+    li
+    {
+        margin: 10px;
+    }
+
+.box
+{
+    /* margin-left: -20vh; */
+    align-self: center;
+    position: relative;
+    width: 60vh;
+    height: 90vh;
+    background-color: #572bb5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60vh;
+    height: 90vh;
+    background: linear-gradient(0deg,transparent,#f23fc2, #f23fc2);
+    border-radius: 10px;
+    transform-origin: bottom right;
+    animation: animate 6s infinite;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60vh;
+    height: 90vh;
+    background: linear-gradient(0deg,transparent,#f23fc2, #f23fc2);
+    border-radius: 10px;
+    transform-origin: bottom right;
+    animation: animate 6s infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form
+{
+    position: absolute;
+    inset: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to top, #0e010b, #3f2775);
+    z-index: 10; 
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2
+{
+    color: #f23fc2;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.inputBox
+{
+    position: relative;
+    width: 50vh;
+    margin-top: 30px;
+    /* margin-bottom: 20px; */
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    z-index: 10;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+}
+
+.inputBox input:valid ~span,
+.inputBox input:focus ~span
+{
+    color: #f23fc2;
+    transform:  translateX(-10px) translateY(-34px);
+    font-size: 0.7em;
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #f23fc2;
+    border-radius: 5px;
+    pointer-events: none;
+    transition: 0.5s; 
+    z-index: 9;
+}
+
+.inputBox input:valid ~i,
+.inputBox input:focus ~i
+{
+    height: 5.5vh;
+}
+
+.links
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover
+{
+    color: #f23fc2;
+}
+
+.submit
+{
+    margin-top: 30px;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background: #f23fc2;
+    color: #fff;
+    font-size: 1.5vh;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+.submit:hover
+{
+    background: #572bb5;
+}
+
+.text{
+    width: 300px;
+    height: 50px;
+    background-color: #f23fc2;
+    text-align: center;
+    border-radius: 30px;
+    /* margin-top: 50px; */
+    padding-top: 18px;
+    margin-top: 90vh;
+    margin-left: -50vh;
+    margin-right: 0vh;
+    z-index: 11;
+}
+
+.text h1
+{
+    font-size: 14px;
+    color: rgb(250, 249, 252);
+    
+}
+
+
+
+
+
+
+
