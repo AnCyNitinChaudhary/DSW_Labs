@@ -1,0 +1,8 @@
+create database adsw;
+use adsw;
+create table sinup(
+nam varchar(30),
+username varchar(20),
+email varchar(50),
+pass varchar(20)
+);
